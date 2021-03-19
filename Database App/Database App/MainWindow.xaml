@@ -1,0 +1,85 @@
+﻿<Window x:Class="Database_App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Database_App"
+        mc:Ignorable="d"
+        Title="Database Application" Height="768" Width="1366" WindowState="Maximized" >
+    <Grid Background="White">
+        <Menu HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="1366">
+            <MenuItem Header="File" Padding="7,0,7,0" Height="25">
+                <MenuItem x:Name="manuopendb" Header="Open Database Version" Height="25"/>
+                <MenuItem x:Name="menusavedb" Header="Save Database Version" Height="25"/>
+                <MenuItem x:Name="menuexitapp" Header="Exit" Height="25"/>
+            </MenuItem>
+            <MenuItem Header="Edit" Padding="7,0,7,0" Height="25">
+                <MenuItem x:Name="manudeleteselected" Header="Delete selected record" Height="25"/>
+
+            </MenuItem>
+        </Menu>
+        <!--create a toolbar and add buttons-->
+        <ToolBar Height="25" Margin="0,25,0,0"  VerticalAlignment="Top">
+            <Button x:Name="btnopendb" Height="25" Width="25" ToolTip="Open Saved Database Version">
+                <Image Source="icons/open.jpg" />
+            </Button>
+            <Button x:Name="btnsavedb" Height="25" Width="25" Margin="15,0,0,0" ToolTip="Save Current Database version">
+                <Image Source="icons/save.jpg" />
+            </Button>
+            <Button x:Name="btnsearcdb" Height="25" Width="25" Margin="950,0,0,0" ToolTip="search by name or id" Click="btnsearcdb_Click">
+                <Image Source="icons/magnifying-glass.png" />
+            </Button>
+            <TextBox x:Name="txtsearchdb" Height="25" Margin="15,0,0,0" TextWrapping="NoWrap" Text="Search Records" VerticalAlignment="Top" Width="220"  GotFocus="txtsearchdb_GotFocus" LostFocus="txtsearchdb_LostFocus"/>
+        </ToolBar>
+
+        <!--Create a tab control to show different tabs-->
+        <TabControl  TabStripPlacement="Left" HorizontalAlignment="Left" Height="600" Margin="0,50,0,0" VerticalAlignment="Top" Width="1366">
+            <TabItem Header="CREATE RECORD">
+                <Grid Background="AliceBlue">
+                    <Button x:Name="btncreaterecord" Content="CREATE NEW" Padding="7,0,7,0" Height="25"  Margin="107,516,0,53" HorizontalAlignment="Left" Click="btncreaterecord_Click"/>
+                    <TextBox x:Name="txtupdateid" HorizontalAlignment="Left" Height="25" Margin="617,516,0,0" TextWrapping="NoWrap" Text="Enter ID" VerticalAlignment="Top" Width="120" GotFocus="txtupdateid_GotFocus" LostFocus="txtupdateid_LostFocus"/>
+                    <Button x:Name="btnupdaterecord" Content="UPDATE EXISTING" Padding="7,0,7,0" Height="25" Margin="759,516,0,53" HorizontalAlignment="Left" Click="btnupdaterecord_Click"/>
+                    <StackPanel HorizontalAlignment="Left"  Height="447" Margin="107,10,0,0" VerticalAlignment="Top" Width="118">
+                        <Label Height="25" Padding="3" Margin="0, 10" Content="Client ID" FontWeight="Bold"/>
+                        <Label Height="25" Padding="3" Margin="0,10" Content="Name" FontWeight="Bold"/>
+                        <Label Height="25" Padding="3" Margin="0,10" Content="SurName" FontWeight="Bold"/>
+                        <Label Height="25" Padding="3" Margin="0,10" Content="Birth Date" FontWeight="Bold"/>
+                        
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Left" Height="447" Margin="225,10,0,0" VerticalAlignment="Top" Width="396">
+                        <TextBox x:Name="txtclientid" HorizontalAlignment="Left" Margin="0,10" Height="25" Width="350" FontWeight="Bold" Padding="3"/>
+                        <TextBox x:Name="txtname" HorizontalAlignment="Left" Margin="0,10" Height="25" Width="350" FontWeight="Bold" Padding="3"/>
+                        <TextBox x:Name="txtsirname"   Margin="0,10" Height="25" Width="350" HorizontalAlignment="Left" FontWeight="Bold" Padding="3"/>
+
+                        <DatePicker x:Name="datebirthdate" Height="25"  SelectedDateFormat="Short" Margin="0,10" HorizontalAlignment="Left" Width="350" FontWeight="Bold"/>
+                    </StackPanel>
+                    
+                </Grid>
+            </TabItem>
+            <TabItem Header="VIEW RECORD">
+                <Grid Background="AliceBlue">
+
+                    <Button x:Name="btndeleteselected" Content="DELETE SELECTED" Padding="7,0,7,0" Height="25" Margin="107,516,0,53" HorizontalAlignment="Left" Click="btndeleteselected_Click"/>
+                    <TextBox x:Name="txtdeletebyid"  HorizontalAlignment="Left" Height="25" Margin="440,516,0,0" Text="Enter ID" TextAlignment="Left" VerticalContentAlignment="Center" TextWrapping="NoWrap"  VerticalAlignment="Top" Width="120" GotFocus="txtdeletebyid_GotFocus" LostFocus="txtdeletebyid_LostFocus"/>
+                    <Button x:Name="btndeletebyid" Content="DELETE BY ID" Padding="7,0,7,0" Height="25" Margin="565,516,0,53" HorizontalAlignment="Left" Click="btndeletebyid_Click"/>
+                    <DataGrid x:Name="datdbrecords" AutoGenerateColumns="False" IsReadOnly="True" HorizontalAlignment="Left" Height="429"  Width="1258" VerticalAlignment="Top">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn  Binding="{Binding clientid}" ClipboardContentBinding="{x:Null}" Width="*" Header="CLIENT ID"/>
+                            <DataGridTextColumn  Binding="{Binding name}" ClipboardContentBinding="{x:Null}" Width="*" Header="NAME"/>
+                            <DataGridTextColumn  Binding="{Binding surname}" ClipboardContentBinding="{x:Null}" Width="*" Header="SURNAME"/>
+                            <DataGridTextColumn  Binding="{Binding id}" ClipboardContentBinding="{x:Null}" Width="*" Header="ID"/>
+                            <DataGridTextColumn  Binding="{Binding birthdate}" ClipboardContentBinding="{x:Null}" Width="*" Header="BIRTH DATE"/>
+                            <DataGridTextColumn  Binding="{Binding age}" ClipboardContentBinding="{x:Null}" Width="*" Header="AGE"/>
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button x:Name="btnrefresh" Content="REFRESH" Padding="7,0,7,0" Height="25" Margin="967,516,0,53" HorizontalAlignment="Left" Click="btnrefresh_Click"/>
+
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+
+
+    </Grid>
+</Window>

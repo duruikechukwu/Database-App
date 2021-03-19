@@ -1,0 +1,28 @@
+C:\Users\hp\source\repos\Database App\Database App\bin\Debug\Database App.exe.config
+C:\Users\hp\source\repos\Database App\Database App\bin\Debug\Database App.exe
+C:\Users\hp\source\repos\Database App\Database App\bin\Debug\Database App.pdb
+C:\Users\hp\source\repos\Database App\Database App\obj\Debug\Database App.csprojAssemblyReference.cache
+C:\Users\hp\source\repos\Database App\Database App\obj\Debug\MainWindow.g.cs
+C:\Users\hp\source\repos\Database App\Database App\obj\Debug\App.g.cs
+C:\Users\hp\source\repos\Database App\Database App\obj\Debug\Database App_MarkupCompile.cache
+C:\Users\hp\source\repos\Database App\Database App\obj\Debug\Database App_MarkupCompile.lref
+C:\Users\hp\source\repos\Database App\Database App\obj\Debug\MainWindow.baml
+C:\Users\hp\source\repos\Database App\Database App\obj\Debug\Database App.g.resources
+C:\Users\hp\source\repos\Database App\Database App\obj\Debug\Database_App.Properties.Resources.resources
+C:\Users\hp\source\repos\Database App\Database App\obj\Debug\Database App.csproj.GenerateResource.cache
+C:\Users\hp\source\repos\Database App\Database App\obj\Debug\Database App.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\Database App\Database App\obj\Debug\Database App.exe
+C:\Users\hp\source\repos\Database App\Database App\obj\Debug\Database App.pdb
+C:\Users\hp\source\repos\Database App\Database App\bin\Debug\EntityFramework.dll
+C:\Users\hp\source\repos\Database App\Database App\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hp\source\repos\Database App\Database App\bin\Debug\System.Data.SQLite.dll
+C:\Users\hp\source\repos\Database App\Database App\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\hp\source\repos\Database App\Database App\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\hp\source\repos\Database App\Database App\bin\Debug\EntityFramework.xml
+C:\Users\hp\source\repos\Database App\Database App\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hp\source\repos\Database App\Database App\bin\Debug\System.Data.SQLite.xml
+C:\Users\hp\source\repos\Database App\Database App\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\hp\source\repos\Database App\Database App\obj\Debug\Database App.csproj.CopyComplete
+C:\Users\hp\source\repos\Database App\Database App\bin\Debug\res\userdb.db
+C:\Users\hp\source\repos\Database App\Database App\obj\Debug\Database App_Content.g.cs
+C:\Users\hp\source\repos\Database App\Database App\bin\Debug\res\myusersdb.db
